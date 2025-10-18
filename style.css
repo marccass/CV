@@ -493,10 +493,16 @@ footer#contacte p { margin-bottom: 1.5rem; font-size: 1.1rem; }
         display: flex; /* Mostra el botó d'hamburguesa */
     }
 
-    /* Amaguem el canviador d'idioma de PC */
+    /* ===== AQUEST ÉS EL CANVI ===== */
+    /* Ara el canviador d'idioma és visible en mòbil */
+    /*
     .lang-switcher {
         display: none;
     }
+    */
+    /* ============================== */
+
+
     /* Podries afegir els botons d'idioma dins del menú mòbil si vols */
 
     /* Reducció de text per a mòbils */
