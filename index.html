@@ -1,55 +1,210 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="ca" data-theme="dark"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum Vitae - Marc Cassanmagnago Somoza</title>
-    <link rel="stylesheet" href="styles.css">
+    <title data-key="pageTitle">Portfoli | Marc Cassanmagnago Somoza</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-   
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Index</a></li>
-                <li><a href="objetivos.html">Objetivos</a></li>
-                <li><a href="estudios.html">Estudios</a></li>
-                <li><a href="idiomas.html">Idiomas</a></li>
-                <li><a href="experiencia.html">Experiencia</a></li>
-                <li><a href="otros.html">Otros</a></li>
+    <nav class="header">
+        <div class="container">
+            <a href="#inici" class="logo">Marc C. Somoza</a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#sobre-mi" class="nav-link" data-key="navAbout">Sobre Mi</a></li>
+                <li><a href="#habilitats" class="nav-link" data-key="navSkills">Habilitats</a></li>
+                <li><a href="#projectes" class="nav-link" data-key="navProjects">Projectes</a></li>
+                <li><a href="#experiencia" class="nav-link" data-key="navExperience">Experiència</a></li>
+                <li><a href="#contacte" class="nav-link" data-key="navContact">Contacte</a></li>
             </ul>
-        </nav>
+            
+            <div class="controls-container">
+                <button id="theme-toggle" aria-label="Canviar tema">
+                    <i class="fas fa-sun"></i> </button>
+                
+                <div class="lang-switcher">
+                    <button id="lang-ca" class="lang-button active">CA</button>
+                    <button id="lang-es" class="lang-button">ES</button>
+                    <button id="lang-en" class="lang-button">EN</button>
+                </div>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inici">
+        <div class="contingut-hero">
+            <h1 class="animat-entrada" data-key="heroTitle">Marc Cassanmagnago Somoza</h1>
+            <h2 class="animat-entrada" style="animation-delay: 100ms;" data-key="heroSubtitle">Estudiant d'Enginyeria Informàtica | Desenvolupador de Programari en formació</h2>
+            <p class="animat-entrada" style="animation-delay: 200ms;" data-key="heroDesc">
+                Hola, sóc en Marc. Un estudiant d'Enginyeria Informàtica a la Universitat de Girona apassionat pel desenvolupament de programari, la programació i els sistemes. Busco activament noves experiències per guanyar experiència pràctica i seguir creixent dins del sector tecnològic.
+            </p>
+            <div class="botons-hero animat-entrada" style="animation-delay: 300ms;">
+                <a href="#projectes" class="boto boto-primari" data-key="heroBtnProjects">Veure Projectes</a>
+                <a href="#contacte" class="boto boto-secundari" data-key="heroBtnContact">Contacta'm</a>
+            </div>
+        </div>
     </header>
 
-    
-    <div class="container">
+    <main>
         
-        
-        <aside>
-            <div class="contact-info">
-                <img src="imatges/1696498053070.jpeg" alt="Foto de Marc Cassanmagnago" class="profile-pic">
-                
-                <h2>Marc Cassanmagnago Somoza</h2>
-                <p><strong>Fecha de nacimiento:</strong> 15/03/2004</p>
-                <p><strong>Dirección:</strong> CRTA. CAMPINS 18 2º 2ª - Sant Celoni</p>
-                <p><strong>Teléfono:</strong> <a href="tel:+34639035718">639 035 718</a></p>
-                <p><strong>Email:</strong> <a href="mailto:marccass04@gmail.com">marccass04@gmail.com</a></p>
+        <section id="sobre-mi">
+            <div class="container">
+                <h2 class="animat-entrada" data-key="aboutTitle">Sobre Mi</h2>
+                <p class="animat-entrada" data-key="aboutDesc">El meu objectiu principal és submergir-me en un entorn professional real que em permeti aplicar els coneixements del meu Grau en Enginyeria Informàtica i descobrir quines àrees del món *tech* m'agraden més.</p>
+                <ul class="animat-entrada">
+                    <li data-key="aboutLang"><strong>Idiomes:</strong> Sóc parlant natiu de català i espanyol. A més, tinc un nivell d'anglès molt alt i fluid (parlat i escrit), adquirit en part gràcies a una estada de dos anys als Estats Units. També tinc un nivell bàsic d'italià.</li>
+                    <li data-key="aboutMobility"><strong>Mobilitat:</strong> Disposo de carnet de conduir tipus B i A2, i vehicle particular, la qual cosa em dóna total autonomia per desplaçar-me.</li>
+                    <li data-key="aboutInterests"><strong>Interessos:</strong> Fora de la tecnologia, m'interessa el gimnàs i viatjar a l'estranger.</li>
+                </ul>
+            </div>
+        </section>
 
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/marc-cassanmagnago" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/marccassan" target="_blank">GitHub</a>
+        <section id="habilitats">
+            <div class="container">
+                <h2 class="animat-entrada" data-key="skillsTitle">Habilitats Tècniques</h2>
+                <p class="animat-entrada" style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto;" data-key="skillsDesc">Aquestes són algunes de les tecnologies amb les quals he treballat durant la meva formació i projectes:</p>
+                <div class="graella-habilitats animat-entrada">
+                    <span class="habilitat">C++</span>
+                    <span class="habilitat">Python</span>
+                    <span class="habilitat">Java</span>
+                    <span class="habilitat">HTML/CSS</span>
+                    <span class="habilitat">SQL</span>
+                    <span class="habilitat">Git</span>
+                    <span class="habilitat">Android Studio</span>
+                    <span class="habilitat">OpenCV</span>
+                    <span class="habilitat">MySQL</span>
+                    <span class="habilitat">Linux (Bàsic)</span>
                 </div>
             </div>
-        </aside>
+        </section>
 
-       
-        <main>
-            <h2>Bienvenido al Currículum de Marc Cassanmagnago Somoza</h2>
-            <p>Explora mis objetivos, estudios, habilidades en idiomas, experiencia laboral y otros detalles relevantes usando el menú de navegación superior.</p>
-        </main>
-    </div>
+        <section id="projectes">
+            <div class="container">
+                <h2 class="animat-entrada" data-key="projectsTitle">Projectes Destacats</h2>
+                <div class="graella-projectes">
+                    
+                    <div class="targeta-projecte animat-entrada">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDN8fGNvbXB1dGVyJTIwdmlzaW9ufGVufDB8fHx8MTY4OTgzNTY2Nnw&ixlib=rb-4.0.3&q=80&w=1080" alt="Dona treballant amb visió per computador">
+                        <div class="contingut-targeta">
+                            <h3 data-key="project1Title">Projecte de Visió per Computador</h3>
+                            <p data-key="project1Desc">Projecte acadèmic desenvolupat amb C++ i la llibreria OpenCV per a la detecció d'objectes en temps real.</p>
+                            <div class="tecnologies-projecte">
+                                <span>C++</span>
+                                <span>OpenCV</span>
+                            </div>
+                            <div class="enllacos-projecte">
+                                <a href="https://github.com/marccass" target="_blank" data-key="projectBtnCode">Veure Codi (GitHub)</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="targeta-projecte animat-entrada" style="transition-delay: 100ms;">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDJ8fG1vYmlsZSUyMHRhc2slMjBtYW5hZ2VyfGVufDB8fHx8MTcyOTg1ODIzMXw&ixlib=rb-4.0.3&q=80&w=1080" alt="Mockup d'una aplicació mòbil de llistat de tasques en un telèfon">
+                        <div class="contingut-targeta">
+                            <h3 data-key="project2Title">Gestor de Tasques Mòbil</h3>
+                            <p data-key="project2Desc">Aplicació nativa per a Android desenvolupada amb Java i Android Studio, connectada a una base de dades MySQL local.</p>
+                            <div class="tecnologies-projecte">
+                                <span>Java</span>
+                                <span>Android Studio</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="enllacos-projecte">
+                                <a href="https://github.com/marccass" target="_blank" data-key="projectBtnCode">Veure Codi (GitHub)</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="targeta-projecte animat-entrada" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDR8fHdlYnNpdGUlMjBkZXNpZ24lMjBvZmZpY2V8ZW58MHx8fHwxNzI5ODU1ODg4fA&ixlib=rb-4.0.3&q=80&w=1080" alt="Disseny d'una pàgina web moderna en una reunió">
+                        <div class="contingut-targeta">
+                            <h3 data-key="project3Title">Pàgina Web Estàtica</h3>
+                            <p data-key="project3Desc">Disseny i maquetació d'un lloc web per a un petit negoci local utilitzant HTML5 i CSS3, centrat en un disseny responsive.</p>
+                            <div class="tecnologies-projecte">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <div class="enllacos-projecte">
+                                <a href="https://github.com/marccass" target="_blank" data-key="projectBtnCode">Veure Codi (GitHub)</a>
+                                <a href="#" target="_blank" data-key="projectBtnDemo">Demo en Viu</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
 
+        <section id="experiencia">
+            <div class="container">
+                <h2 class="animat-entrada" data-key="expTitle">Experiència Professional</h2>
+                
+                <div class="item-experiencia animat-entrada">
+                    <h3 data-key="exp1Title">Àrbitre</h3>
+                    <span>Federació Catalana de Futbol (2021-2025)</span>
+                    <p data-key="exp1Desc">Gestió de partits i resolució de conflictes en temps real. M'ha permès desenvolupar responsabilitat, la capacitat de prendre decisions ràpides i l'habilitat de treballar sota pressió.</p>
+                </div>
+                
+                <div class="item-experiencia animat-entrada" style="transition-delay: 100ms;">
+                    <h3 data-key="exp2Title">Community Manager</h3>
+                    <span>CE Vilassar de Dalt (2021-2022)</span>
+                    <p data-key="exp2Desc">Gestió de xarxes socials i creació de contingut digital. Tasques de disseny de publicacions, seguiment d'estadístiques i contacte directe amb els seguidors.</p>
+                </div>
+                
+                <div class="item-experiencia animat-entrada" style="transition-delay: 200ms;">
+                    <h3 data-key="exp3Title">Monitor/Cangur d'infants</h3>
+                    <span>(2021-2022)</span>
+                    <p data-key="exp3Desc">Cura i acompanyament de nens, organitzant activitats i donant reforç escolar.</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacte">
+        <div class="container">
+            <h2 class="animat-entrada" data-key="contactTitle">Parlem!</h2>
+            <p class="animat-entrada" data-key="contactDesc">Estic obert a noves oportunitats laborals i col·laboracions.<br>Si el meu perfil t'interessa, no dubtis a contactar-me.</p>
+            
+            <div class="enllacos-contacte animat-entrada">
+                <a href="mailto:marccaso04@gmail.com">marccaso04@gmail.com</a>
+                <a href="https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/marccass" target="_blank">GitHub</a>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form-footer animat-entrada">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="Nou missatge del teu Portfoli">
+                <input type="hidden" name="from_name" value="Portfoli Marc C.">
+                
+                <div class="form-group-footer">
+                    <input type="email" name="email" data-key="formPlaceholder" placeholder="El teu correu electrònic" required>
+                    <button type="submit" class="animated-button">
+                        <span data-key="formButton">Enviar</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <p class="copyright" data-key="footerCopyright">© 2025 Marc Cassanmagnago Somoza.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
