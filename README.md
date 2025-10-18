@@ -1,33 +1,75 @@
-# Project: CV
+# Portfoli Personal - Marc Cassanmagnago Somoza ✨
 
-## 1. Project Analysis
+Aquesta és la pàgina web del meu portfoli personal, dissenyada per mostrar les meves habilitats, projectes i experiència com a estudiant d'Enginyeria Informàtica a la Universitat de Girona.
 
-### User Profile
-To create an optimized experience, we have defined a user persona for our website. The target user is a young professional looking to learn more about my skills and professional experience, similar to an online portfolio or resume. This user likely accesses the site on both mobile and desktop devices and values a clear, easy-to-navigate design that allows them to quickly find relevant information.
+**Visita la web en directe:** [Enllaç a la teva web desplegada - ex: el-teu-usuari.github.io/portfoli/] (Reemplaça amb el teu enllaç real quan el despleguis)
 
-### Information Architecture
-The information architecture is organized into a simple multi-page structure, improving usability and navigation. Each page is dedicated to a specific aspect of the professional profile:
-1. **Objectives** - Describes professional goals.
-2. **Education** - Lists academic achievements and completed courses.
-3. **Languages** - Shows language proficiency levels.
-4. **Experience** - Lists relevant work experience.
-5. **Other** - Includes any additional relevant information (e.g., technical skills).
-The top navigation bar allows users to move easily between these sections, ensuring that all information is just a click away.
+## 🚀 Característiques Principals
 
-### Visual Design
-The visual design follows a clean and minimalist approach, using neutral colors (like grays and white) for the background and contrasting colors (like yellow) for interactive elements. This ensures sufficient contrast and improves readability. We use a sans-serif font that is modern and easy to read. The design is fully responsive, adapting well to both desktop and mobile screens. The top navigation bar provides easy access to all key sections, enhancing the user experience.
+* **Multillenguatge:** Suport complet per a Català (CA), Espanyol (ES) i Anglès (EN), amb persistència via `localStorage`.
+* **Canviador de Tema:** Mode Clar (Dia) ☀️ i Mode Fosc (Nit) 🌙, amb persistència via `localStorage`.
+* **Disseny Responsive:** Totalment adaptable a dispositius mòbils, tauletes i escriptoris, incloent un menú d'hamburguesa funcional.
+* **Animacions Modernes:**
+    * Efectes d'entrada suaus en fer scroll (`IntersectionObserver`).
+    * Efecte 3D interactiu a les targetes de projectes al passar el ratolí.
+    * Capçalera amb efecte "vidre borrós" (blur) que canvia en fer scroll.
+    * Micro-interaccions als botons i elements d'habilitats.
+* **Interactivitat:** Desenvolupat amb Vanilla JavaScript per a una experiència d'usuari fluida.
+* **Estructura Neta:** Codi organitzat en fitxers HTML, CSS i JavaScript separats per a una millor mantenibilitat.
 
-### Link to Figma Project
-https://www.figma.com/design/oHUPS9C7P2eIcfuXa8IV5n/html.to.design-%E2%80%94-by-%E2%80%B9div%E2%80%BARIOTS-%E2%80%94-Import-websites-to-Figma-designs-(web%2Chtml%2Ccss)-(Community)?node-id=1-4155&t=Q1ALn1OnhsH3Kqyv-1
+## 💻 Tecnologies Utilitzades
 
-There are different pages in the figma's project
+* **HTML5:** Per a l'estructura semàntica del contingut.
+* **CSS3:** Per a l'estil, disseny responsive, variables CSS (per als temes) i animacions.
+    * Fonts: [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts.
+    * Icones: [Font Awesome](https://fontawesome.com/) per a les icones de tema.
+* **Vanilla JavaScript (ES6+):** Per a la interactivitat, canvi de tema, selecció d'idioma, menú mòbil i animacions dinàmiques (`IntersectionObserver`).
 
-## 2. Website Code
-The repository includes the website’s source code, consisting of HTML and CSS files. The file structure is as follows:
-- `index.html` - Home page
-- `objectives.html`, `education.html`, `languages.html`, `experience.html`, `other.html` - Additional pages
-- `styles.css` - Stylesheet for all HTML files.
+## 📂 Estructura del Projecte
 
-## 3. Public Link to the Page
-You can view the live page on GitHub Pages at the following link:
-https://github.com/marccass/CV_p1
+/
+├── index.html         # Estructura principal de la pàgina
+├── style.css          # Full d'estils (inclou variables per als temes clar/fosc)
+├── script.js          # Lògica JavaScript (tema, idioma, animacions, menú mòbil)
+├── translations.js    # Fitxer amb totes les traduccions (CA, ES, EN)
+├── images/            # Carpeta per a les imatges dels projectes
+│   └── ... (les teves imatges de projectes aquí)
+└── README.md          # Aquest fitxer
+
+## 🛠️ Com Utilitzar / Desplegar
+
+1.  **Clonar el Repositori (si està a GitHub):**
+    ```bash
+    git clone [URL-del-teu-repositori]
+    cd [nom-del-repositori]
+    ```
+2.  **Obrir Localment:** Simplement obre el fitxer `index.html` amb el teu navegador web preferit.
+3.  **Desplegar:** Aquest projecte és totalment estàtic. Pots desplegar-lo fàcilment i gratuïtament a plataformes com:
+    * **GitHub Pages:** Puja els fitxers a un repositori de GitHub i activa GitHub Pages a la configuració del repositori.
+    * **Netlify:** Arrossega i deixa anar la carpeta del projecte.
+    * **Vercel:** Connecta el teu repositori de GitHub.
+
+## 🔧 Personalització
+
+Per adaptar aquest portfoli a les teves necessitats:
+
+1.  **Contingut dels Projectes:** Edita el fitxer `translations.js` per canviar els títols i descripcions dels projectes en cada idioma (`project1Title`, `project1Desc`, etc.).
+2.  **Imatges dels Projectes:**
+    * Crea una carpeta anomenada `images` a l'arrel del projecte.
+    * Desa les teves imatges dins d'aquesta carpeta.
+    * Al fitxer `index.html`, a la secció `#projectes`, canvia el `src` de cada etiqueta `<img>` per apuntar a les teves imatges (ex: `src="images/el-teu-projecte.jpg"`).
+3.  **Dades Personals:** Actualitza els enllaços de LinkedIn i GitHub, i l'adreça de correu electrònic al `<footer>` dins del fitxer `index.html`.
+4.  **Formulari de Contacte:** Si vols utilitzar el formulari del peu de pàgina amb un servei com [Web3Forms](https://web3forms.com/), reemplaça `"YOUR_ACCESS_KEY_HERE"` amb la teva clau d'accés dins de l'etiqueta `<form>` al `index.html`.
+5.  **(Opcional) Foto de Perfil:** Pots afegir una etiqueta `<img>` amb la teva foto a la secció `<header id="inici">` si ho desitges.
+
+## 📬 Contacte
+
+Si tens alguna pregunta o suggeriment, no dubtis a contactar-me:
+
+* **Correu:** marccaso04@gmail.com
+* **LinkedIn:** [https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/](https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/)
+* **GitHub:** [https://github.com/marccass](https://github.com/marccass)
+
+---
+
+Fet amb ❤️ per Marc Cassanmagnago Somoza.
