@@ -1,6 +1,6 @@
 # 💻 Portfoli Web Professional de Marc Cassanmagnago Somoza
 
-[![GitHub Pages](https://github.com/marccass/marccass.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://marccassanmagnago.com)
+[![GitHub Pages](https://github.com/marccass/marccass.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://cassanmagnago.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Llenguatges](https://img.shields.io/github/languages/top/marccass/marccass.github.io?color=blue)](https://github.com/marccass)
 
