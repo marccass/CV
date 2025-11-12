@@ -113,7 +113,7 @@ Les contribucions, suggeriments i informes d'errors són benvinguts. Si teniu al
 
 Marc Cassanmagnago Somoza - [marccaso04@gmail.com](mailto:marccaso04@gmail.com)
 
-Projecte Link: [https://marccassanmagnago.com](https://marccassanmagnago.com)
+Projecte Link: [https://cassanmagnago.com](https://cassanmagnago.com)
 
 ## 📜 Llicència
 
