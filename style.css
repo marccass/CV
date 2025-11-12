@@ -154,7 +154,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: 1rem;
-    margin-left: 1rem;
+    margin-left: auto;
 }
 
 #theme-toggle {
@@ -170,7 +170,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 #theme-toggle:hover {
@@ -195,6 +194,7 @@ body {
     cursor: pointer;
     font-weight: 700;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .lang-button:hover {
@@ -206,8 +206,42 @@ body {
     color: #fff;
 }
 
-/* Menú mòbil */
-.nav-toggle { display: none; }
+/* Menú mòbil - Botó hamburguesa */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -914,17 +948,74 @@ footer#contacte p {
         padding: 0 1.5rem;
     }
 
-    /* Menú mòbil */
+    /* Header i navegació mòbil */
+    .header .container {
+        justify-content: space-between;
+    }
+
     .header .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
         width: 80%;
         max-width: 350px;
+        height: 100vh;
+        background-color: var(--color-fons-secundari);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 15px hsla(var(--shadow-color), 0.2);
+        overflow-y: auto;
+        margin-left: 0;
+    }
+
+    .header .nav-menu.is-active {
+        right: 0;
+    }
+
+    .header .nav-menu li {
+        width: 100%;
+    }
+
+    .header .nav-menu li a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-link.active::after {
+        display: none;
     }
     
     .nav-toggle {
         display: flex;
     }
 
+    .controls-container {
+        gap: 0.75rem;
+        margin-left: auto;
+    }
+
+    #theme-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .lang-button {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
     /* Hero */
+    header#inici {
+        min-height: 85vh;
+        padding: 3rem 1.5rem;
+    }
+
     header#inici h1 {
         font-size: 2.5rem;
     }
@@ -986,10 +1077,16 @@ footer#contacte p {
         height: 180px;
     }
 
+    /* Desactivar efecte 3D en mòbil */
+    .targeta-projecte:hover {
+        transform: scale(1.02) !important;
+    }
+
     /* Botons */
     .botons-hero {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
     
     .boto {
@@ -1039,6 +1136,21 @@ footer#contacte p {
     
     .header .logo {
         font-size: 1.25rem;
+    }
+
+    .controls-container {
+        gap: 0.5rem;
+    }
+
+    #theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .lang-button {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.8rem;
     }
 }
 

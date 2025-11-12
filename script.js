@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    console.log("Portfoli dinàmic de Marc carregat! (v5 Redisseny Professional)");
+    console.log("Portfoli dinàmic de Marc carregat! (v5 Redisseny Professional - Mòbil Optimitzat)");
 
     // --- Seleccionem els elements de control ---
     const themeToggleButton = document.getElementById('theme-toggle');
@@ -100,13 +100,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         themeToggleButton.addEventListener('click', toggleTheme);
     }
     
-    // --- 3. LÒGICA DEL MENÚ MÒBIL ---
+    // --- 3. LÒGICA DEL MENÚ MÒBIL (MILLORADA) ---
     if (navToggle && navMenu) {
         // Obrir/tancar menú amb el botó
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('is-active');
             navToggle.classList.toggle('is-active');
             menuOverlay.classList.toggle('is-active');
+            
+            // Prevenir scroll del body quan el menú està obert
+            if (navMenu.classList.contains('is-active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
 
         // Tancar menú quan es fa clic a un enllaç
@@ -115,6 +123,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 navMenu.classList.remove('is-active');
                 navToggle.classList.remove('is-active');
                 menuOverlay.classList.remove('is-active');
+                document.body.style.overflow = '';
             });
         });
 
@@ -124,8 +133,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 navMenu.classList.remove('is-active');
                 navToggle.classList.remove('is-active');
                 menuOverlay.classList.remove('is-active');
+                document.body.style.overflow = '';
             });
         }
+
+        // Tancar menú amb la tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('is-active')) {
+                navMenu.classList.remove('is-active');
+                navToggle.classList.remove('is-active');
+                menuOverlay.classList.remove('is-active');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
     // --- 4. INICIALITZACIÓ (Carregar preferències) ---
@@ -185,25 +205,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    // --- 7. EFECTE 3D A LES TARGETES DE PROJECTE ---
+    // --- 7. EFECTE 3D A LES TARGETES DE PROJECTE (NOMÉS DESKTOP) ---
     const projectCards = document.querySelectorAll('.targeta-projecte');
-    projectCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -5; // Rotació més subtil
-            const rotateY = ((x - centerX) / centerX) * 5;
-            card.style.setProperty('--rotateX', `${rotateX}deg`);
-            card.style.setProperty('--rotateY', `${rotateY}deg`);
+    
+    // Detectar si és un dispositiu tàctil
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    
+    if (!isTouchDevice) {
+        // Només aplicar efecte 3D en dispositius no tàctils (desktop)
+        projectCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5; // Rotació més subtil
+                const rotateY = ((x - centerX) / centerX) * 5;
+                card.style.setProperty('--rotateX', `${rotateX}deg`);
+                card.style.setProperty('--rotateY', `${rotateY}deg`);
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--rotateX', '0deg');
+                card.style.setProperty('--rotateY', '0deg');
+            });
         });
-        card.addEventListener('mouseleave', () => {
-            card.style.setProperty('--rotateX', '0deg');
-            card.style.setProperty('--rotateY', '0deg');
-        });
-    });
+    }
 
     // --- 8. BOTÓ "TORNAR A DALT" ---
     const scrollToTopBtn = document.getElementById('scroll-to-top');
@@ -277,6 +304,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 submitBtn.querySelector('span').textContent = originalText;
             }
         });
+    }
+
+    // --- 10. MILLORA DE RENDIMENT EN MÒBIL ---
+    // Deshabilitar animacions hover en dispositius tàctils per millorar el rendiment
+    if (isTouchDevice) {
+        document.body.classList.add('touch-device');
     }
 
 });
