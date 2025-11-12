@@ -1,75 +1,279 @@
-# Portfoli Personal - Marc Cassanmagnago Somoza ✨
+# Portfoli Web de Marc Cassanmagnago Somoza - Versió Millorada
 
-Aquesta és la pàgina web del meu portfoli personal, dissenyada per mostrar les meves habilitats, projectes i experiència com a estudiant d'Enginyeria Informàtica a la Universitat de Girona.
+Aquest és el portfoli web personal millorat amb noves funcionalitats, millor accessibilitat, SEO optimitzat i disseny responsive.
 
-**Visita la web en directe:** [Enllaç a la teva web desplegada - ex: el-teu-usuari.github.io/portfoli/] (Reemplaça amb el teu enllaç real quan el despleguis)
+## 📋 Contingut del Paquet
 
-## 🚀 Característiques Principals
+- `index_millorat.html` - Fitxer HTML principal amb totes les millores
+- `style_millorat.css` - Full d'estils CSS actualitzat
+- `script_millorat.js` - JavaScript amb noves funcionalitats
+- `translations_millorat.js` - Traduccions corregides i ampliades (CA/ES/EN)
+- `README.md` - Aquest fitxer amb instruccions
 
-* **Multillenguatge:** Suport complet per a Català (CA), Espanyol (ES) i Anglès (EN), amb persistència via `localStorage`.
-* **Canviador de Tema:** Mode Clar (Dia) ☀️ i Mode Fosc (Nit) 🌙, amb persistència via `localStorage`.
-* **Disseny Responsive:** Totalment adaptable a dispositius mòbils, tauletes i escriptoris, incloent un menú d'hamburguesa funcional.
-* **Animacions Modernes:**
-    * Efectes d'entrada suaus en fer scroll (`IntersectionObserver`).
-    * Efecte 3D interactiu a les targetes de projectes al passar el ratolí.
-    * Capçalera amb efecte "vidre borrós" (blur) que canvia en fer scroll.
-    * Micro-interaccions als botons i elements d'habilitats.
-* **Interactivitat:** Desenvolupat amb Vanilla JavaScript per a una experiència d'usuari fluida.
-* **Estructura Neta:** Codi organitzat en fitxers HTML, CSS i JavaScript separats per a una millor mantenibilitat.
+## 🚀 Instal·lació i Configuració
 
-## 💻 Tecnologies Utilitzades
+### 1. Preparar els fitxers
 
-* **HTML5:** Per a l'estructura semàntica del contingut.
-* **CSS3:** Per a l'estil, disseny responsive, variables CSS (per als temes) i animacions.
-    * Fonts: [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts.
-    * Icones: [Font Awesome](https://fontawesome.com/) per a les icones de tema.
-* **Vanilla JavaScript (ES6+):** Per a la interactivitat, canvi de tema, selecció d'idioma, menú mòbil i animacions dinàmiques (`IntersectionObserver`).
+1. **Renombra els fitxers** eliminant el sufix `_millorat`:
+   - `index_millorat.html` → `index.html`
+   - `style_millorat.css` → `style.css`
+   - `script_millorat.js` → `script.js`
+   - `translations_millorat.js` → `translations.js`
 
-## 📂 Estructura del Projecte
+2. **Col·loca tots els fitxers** al directori arrel del teu lloc web.
 
-/
-├── index.html         # Estructura principal de la pàgina
-├── style.css          # Full d'estils (inclou variables per als temes clar/fosc)
-├── script.js          # Lògica JavaScript (tema, idioma, animacions, menú mòbil)
-├── translations.js    # Fitxer amb totes les traduccions (CA, ES, EN)
-├── images/            # Carpeta per a les imatges dels projectes
-│   └── ... (les teves imatges de projectes aquí)
-└── README.md          # Aquest fitxer
+### 2. Renombrar els fitxers PDF dels CVs
 
-## 🛠️ Com Utilitzar / Desplegar
+**IMPORTANT:** Els noms dels fitxers PDF han de coincidir amb els especificats al codi JavaScript.
 
-1.  **Clonar el Repositori (si està a GitHub):**
-    ```bash
-    git clone [URL-del-teu-repositori]
-    cd [nom-del-repositori]
-    ```
-2.  **Obrir Localment:** Simplement obre el fitxer `index.html` amb el teu navegador web preferit.
-3.  **Desplegar:** Aquest projecte és totalment estàtic. Pots desplegar-lo fàcilment i gratuïtament a plataformes com:
-    * **GitHub Pages:** Puja els fitxers a un repositori de GitHub i activa GitHub Pages a la configuració del repositori.
-    * **Netlify:** Arrossega i deixa anar la carpeta del projecte.
-    * **Vercel:** Connecta el teu repositori de GitHub.
+Renombra els teus fitxers de CV de la següent manera:
 
-## 🔧 Personalització
+- `MarcCassanmagnagoSomozaCV2025CATALÀ..pdf` → `MarcCassanmagnagoSomozaCV2025CATALA.pdf`
+- `MarcCassanmagnagoSomozaCV2025ESPAÑOL.pdf` → `MarcCassanmagnagoSomozaCV2025ESPANOL.pdf`
+- `MarcCassanmagnagoSomozaCV2025ENGLISH.pdf` → `MarcCassanmagnagoSomozaCV2025ENGLISH.pdf`
 
-Per adaptar aquest portfoli a les teves necessitats:
+**Nota:** Hem eliminat els punts dobles i els caràcters especials (À, Ñ) per evitar problemes de compatibilitat.
 
-1.  **Contingut dels Projectes:** Edita el fitxer `translations.js` per canviar els títols i descripcions dels projectes en cada idioma (`project1Title`, `project1Desc`, etc.).
-2.  **Imatges dels Projectes:**
-    * Crea una carpeta anomenada `images` a l'arrel del projecte.
-    * Desa les teves imatges dins d'aquesta carpeta.
-    * Al fitxer `index.html`, a la secció `#projectes`, canvia el `src` de cada etiqueta `<img>` per apuntar a les teves imatges (ex: `src="images/el-teu-projecte.jpg"`).
-3.  **Dades Personals:** Actualitza els enllaços de LinkedIn i GitHub, i l'adreça de correu electrònic al `<footer>` dins del fitxer `index.html`.
-4.  **Formulari de Contacte:** Si vols utilitzar el formulari del peu de pàgina amb un servei com [Web3Forms](https://web3forms.com/), reemplaça `"YOUR_ACCESS_KEY_HERE"` amb la teva clau d'accés dins de l'etiqueta `<form>` al `index.html`.
-5.  **(Opcional) Foto de Perfil:** Pots afegir una etiqueta `<img>` amb la teva foto a la secció `<header id="inici">` si ho desitges.
+### 3. Configurar la clau API del formulari de contacte
 
-## 📬 Contacte
+El formulari de contacte utilitza **Web3Forms**, un servei gratuït per processar formularis.
 
-Si tens alguna pregunta o suggeriment, no dubtis a contactar-me:
+**Passos:**
 
-* **Correu:** marccaso04@gmail.com
-* **LinkedIn:** [https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/](https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/)
-* **GitHub:** [https://github.com/marccass](https://github.com/marccass)
+1. Visita [https://web3forms.com](https://web3forms.com)
+2. Introdueix el teu correu electrònic per obtenir una clau API gratuïta
+3. Obre el fitxer `index.html`
+4. Cerca la línia que diu:
+   ```html
+   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+   ```
+5. Substitueix `YOUR_ACCESS_KEY_HERE` per la teva clau real
+
+**Exemple:**
+```html
+<input type="hidden" name="access_key" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890">
+```
+
+### 4. Afegir la teva foto de perfil
+
+1. Prepara una foto de perfil professional (format quadrat recomanat: 400x400px o superior)
+2. Guarda-la com `profile-photo.jpg` al mateix directori que `index.html`
+3. Si vols utilitzar un nom diferent, actualitza aquesta línia a `index.html`:
+   ```html
+   <img src="profile-photo.jpg" alt="Marc Cassanmagnago Somoza" class="profile-photo">
+   ```
+
+**Consell:** Utilitza formats moderns com WebP per a millor rendiment:
+```html
+<img src="profile-photo.webp" alt="Marc Cassanmagnago Somoza" class="profile-photo">
+```
+
+### 5. Afegir un favicon
+
+1. Crea o descarrega un favicon (icona del lloc web)
+2. Pots utilitzar eines gratuïtes com [Favicon.io](https://favicon.io) o [RealFaviconGenerator](https://realfavicongenerator.net)
+3. Guarda el fitxer com `favicon.png` (o `favicon.ico`) al directori arrel
+4. Si utilitzes un nom diferent, actualitza aquesta línia a `index.html`:
+   ```html
+   <link rel="icon" type="image/png" href="favicon.png">
+   ```
+
+### 6. Actualitzar els enllaços dels projectes
+
+**IMPORTANT:** Actualment, tots els enllaços de projectes apunten a `https://github.com/marccass`.
+
+**Actualitza'ls** amb els repositoris específics de cada projecte:
+
+Obre `index.html` i cerca les seccions de projectes. Canvia els enllaços:
+
+```html
+<!-- ABANS -->
+<a href="https://github.com/marccass" target="_blank" rel="noopener noreferrer">
+
+<!-- DESPRÉS (exemple) -->
+<a href="https://github.com/marccass/computer-vision-project" target="_blank" rel="noopener noreferrer">
+```
+
+### 7. Afegir captures de pantalla dels projectes (Opcional però recomanat)
+
+Les imatges actuals són genèriques d'Unsplash. Per a un portfoli més professional:
+
+1. Fes captures de pantalla dels teus projectes
+2. Guarda-les a una carpeta `images/` al directori arrel
+3. Actualitza les rutes a `index.html`:
+
+```html
+<!-- ABANS -->
+<img src="https://images.unsplash.com/photo-..." alt="...">
+
+<!-- DESPRÉS -->
+<img src="images/project-computer-vision.jpg" alt="Projecte de visió per computador" loading="lazy">
+```
+
+### 8. Configurar metadades Open Graph (Opcional)
+
+Per a millor compartició en xarxes socials:
+
+1. Crea una imatge de previsualització (1200x630px recomanat)
+2. Guarda-la com `preview.jpg`
+3. Actualitza l'URL a `index.html`:
+
+```html
+<meta property="og:url" content="https://www.elteudomini.com/">
+<meta property="og:image" content="https://www.elteudomini.com/preview.jpg">
+```
+
+## 🎨 Personalització
+
+### Canviar els colors
+
+Obre `style.css` i modifica les variables CSS a la secció `:root`:
+
+```css
+:root {
+    --color-primari: #6D28D9;        /* Color principal (violeta) */
+    --color-primari-hover: #5B21B6;  /* Color al passar el ratolí */
+    /* ... altres colors ... */
+}
+```
+
+### Afegir més seccions
+
+Pots afegir noves seccions seguint l'estructura existent:
+
+```html
+<section id="nova-seccio">
+    <div class="container">
+        <h2 class="animat-entrada">Títol de la Secció</h2>
+        <p class="animat-entrada">Contingut...</p>
+    </div>
+</section>
+```
+
+No oblidis afegir l'enllaç a la navegació:
+
+```html
+<li><a href="#nova-seccio" class="nav-link">Nova Secció</a></li>
+```
+
+## ✅ Checklist de Configuració
+
+Abans de publicar, assegura't que has completat:
+
+- [ ] Renombrat tots els fitxers eliminant `_millorat`
+- [ ] Renombrat els fitxers PDF dels CVs (sense espais ni caràcters especials)
+- [ ] Configurat la clau API de Web3Forms al formulari
+- [ ] Afegit la teva foto de perfil (`profile-photo.jpg`)
+- [ ] Afegit un favicon (`favicon.png`)
+- [ ] Actualitzat els enllaços dels projectes amb repositoris específics
+- [ ] Actualitzat les metadades Open Graph amb el teu domini real
+- [ ] (Opcional) Substituït les imatges genèriques per captures reals dels projectes
+- [ ] Provat el formulari de contacte
+- [ ] Verificat que tots els enllaços funcionen correctament
+- [ ] Provat la pàgina en diferents dispositius (mòbil, tablet, escriptori)
+
+## 🌐 Publicació
+
+### Opcions d'allotjament gratuït:
+
+1. **GitHub Pages** (Recomanat per a llocs estàtics)
+   - Gratuït i fàcil de configurar
+   - URL: `nomdusuari.github.io`
+   - [Guia oficial](https://pages.github.com/)
+
+2. **Netlify**
+   - Desplegament automàtic des de GitHub
+   - SSL gratuït
+   - [Netlify.com](https://www.netlify.com/)
+
+3. **Vercel**
+   - Molt ràpid i fàcil d'usar
+   - [Vercel.com](https://vercel.com/)
+
+4. **Cloudflare Pages**
+   - Rendiment excel·lent
+   - [Pages.cloudflare.com](https://pages.cloudflare.com/)
+
+## 🐛 Resolució de Problemes
+
+### El formulari no envia missatges
+
+- Verifica que has configurat correctament la clau API de Web3Forms
+- Comprova la consola del navegador per veure errors
+- Assegura't que el camp `access_key` no estigui buit
+
+### Les imatges no es carreguen
+
+- Verifica que les rutes dels fitxers siguin correctes
+- Assegura't que els noms dels fitxers coincideixin exactament (majúscules/minúscules)
+- Comprova que les imatges estiguin al directori correcte
+
+### El CV no es descarrega
+
+- Verifica que els noms dels fitxers PDF coincideixin amb els especificats a `script.js`
+- Assegura't que els fitxers PDF estiguin al mateix directori que `index.html`
+
+### El menú mòbil no funciona
+
+- Verifica que `script.js` s'estigui carregant correctament
+- Comprova la consola del navegador per veure errors de JavaScript
+
+## 📱 Compatibilitat
+
+Aquest portfoli és compatible amb:
+
+- ✅ Chrome/Edge (últimes versions)
+- ✅ Firefox (últimes versions)
+- ✅ Safari (últimes versions)
+- ✅ Dispositius mòbils (iOS i Android)
+- ✅ Tablets
+
+## 📊 Millores Implementades
+
+### Accessibilitat
+- ✅ Etiquetes ARIA per a lectors de pantalla
+- ✅ Navegació per teclat millorada
+- ✅ Contrast de colors adequat
+
+### SEO
+- ✅ Metadades completes (description, keywords, author)
+- ✅ Open Graph tags per a xarxes socials
+- ✅ Twitter Cards
+- ✅ Estructura semàntica HTML5
+
+### Rendiment
+- ✅ Lazy loading d'imatges
+- ✅ Fonts optimitzades
+- ✅ CSS i JavaScript minificables
+
+### Funcionalitat
+- ✅ Indicador de secció activa a la navegació
+- ✅ Botó "Tornar a dalt"
+- ✅ Validació del formulari amb feedback visual
+- ✅ Menú mòbil amb overlay
+- ✅ Nova secció d'Educació
+- ✅ Enllaços socials destacats
+- ✅ Animacions millorades
+
+### Seguretat
+- ✅ `rel="noopener noreferrer"` en enllaços externs
+- ✅ Honeypot anti-spam al formulari
+- ✅ Validació client-side i server-side
+
+## 📞 Suport
+
+Si tens problemes o preguntes sobre la configuració, revisa:
+
+1. Aquest fitxer README
+2. Els comentaris al codi (marcats amb `<!-- IMPORTANT: ... -->`)
+3. La consola del navegador per veure errors
+
+## 📝 Llicència
+
+Aquest codi és de lliure ús per a Marc Cassanmagnago Somoza. Si vols utilitzar aquest template per al teu propi portfoli, assegura't de canviar tot el contingut personal.
 
 ---
 
-Fet amb ❤️ per Marc Cassanmagnago Somoza.
+**Versió:** 4.0 Millorada  
+**Última actualització:** Novembre 2025  
+**Creat per:** Marc Cassanmagnago Somoza amb assistència d'IA

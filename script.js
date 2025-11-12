@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    console.log("Portfoli dinàmic de Marc carregat! (v3 Estètic)");
+    console.log("Portfoli dinàmic de Marc carregat! (v5 Redisseny Professional)");
 
-    // --- Seleccionem els nous elements de control ---
+    // --- Seleccionem els elements de control ---
     const themeToggleButton = document.getElementById('theme-toggle');
     const langButtons = {
         ca: document.getElementById('lang-ca'),
@@ -11,30 +11,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
     const themeIcon = themeToggleButton.querySelector('i');
     
-    // NOU: Elements del menú mòbil
+    // Elements del menú mòbil
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const menuOverlay = document.getElementById('menu-overlay');
 
     // --- 1. LÒGICA DE TRADUCCIÓ (I18N) ---
     function setLanguage(lang) {
 
-        // --- NOU: LÒGICA PER ACTUALITZAR EL BOTÓ DE DESCÀRREGA DE CV ---
+        // Actualitzar el botó de descàrrega de CV
         const cvPaths = {
-            ca: 'Marc Cassanmagnago Somoza CV 2025 CATALÀ..pdf',
-            es: 'Marc Cassanmagnago Somoza CV 2025 ESPAÑOL.pdf',
-            en: 'Marc Cassanmagnago Somoza CV 2025 ENGLISH.pdf'
+            ca: 'MarcCassanmagnagoSomozaCV2025CATALA.pdf',
+            es: 'MarcCassanmagnagoSomozaCV2025ESPANOL.pdf',
+            en: 'MarcCassanmagnagoSomozaCV2025ENGLISH.pdf'
         };
         const downloadBtn = document.getElementById('download-cv-btn');
         
         if (downloadBtn && cvPaths[lang]) {
             downloadBtn.href = cvPaths[lang];
         }
-        // --- FI DEL NOU CODI ---
 
+        // Validació de l'idioma
         if (!translations[lang]) {
             console.error(`Idioma no trobat: ${lang}`);
-            return;
+            lang = 'ca'; // Fallback a català
         }
 
         // Guardem la preferència
@@ -99,12 +100,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         themeToggleButton.addEventListener('click', toggleTheme);
     }
     
-    // --- 3. NOU: LÒGICA DEL MENÚ MÒBIL ---
+    // --- 3. LÒGICA DEL MENÚ MÒBIL ---
     if (navToggle && navMenu) {
         // Obrir/tancar menú amb el botó
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('is-active');
             navToggle.classList.toggle('is-active');
+            menuOverlay.classList.toggle('is-active');
         });
 
         // Tancar menú quan es fa clic a un enllaç
@@ -112,8 +114,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('is-active');
                 navToggle.classList.remove('is-active');
+                menuOverlay.classList.remove('is-active');
             });
         });
+
+        // Tancar menú quan es fa clic a l'overlay
+        if (menuOverlay) {
+            menuOverlay.addEventListener('click', () => {
+                navMenu.classList.remove('is-active');
+                navToggle.classList.remove('is-active');
+                menuOverlay.classList.remove('is-active');
+            });
+        }
     }
 
     // --- 4. INICIALITZACIÓ (Carregar preferències) ---
@@ -126,7 +138,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setTheme(savedTheme);
 
 
-    // --- 5. ANIMACIONS (Codi anterior) ---
+    // --- 5. ANIMACIONS EN FER SCROLL ---
 
     // Animació general d'entrada en fer scroll
     const animatedElements = document.querySelectorAll('.animat-entrada');
@@ -137,6 +149,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     }, { threshold: 0.1 });
+    
     animatedElements.forEach(element => {
         observer.observe(element);
     });
@@ -153,7 +166,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-    // Efecte 3D a les targetes de projecte
+    // --- 6. INDICADOR DE SECCIÓ ACTIVA A LA NAVEGACIÓ ---
+    const sections = document.querySelectorAll('section[id], header[id]');
+    
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // --- 7. EFECTE 3D A LES TARGETES DE PROJECTE ---
     const projectCards = document.querySelectorAll('.targeta-projecte');
     projectCards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -162,8 +194,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -10;
-            const rotateY = ((x - centerX) / centerX) * 10;
+            const rotateX = ((y - centerY) / centerY) * -5; // Rotació més subtil
+            const rotateY = ((x - centerX) / centerX) * 5;
             card.style.setProperty('--rotateX', `${rotateX}deg`);
             card.style.setProperty('--rotateY', `${rotateY}deg`);
         });
@@ -172,5 +204,79 @@ document.addEventListener('DOMContentLoaded', (event) => {
             card.style.setProperty('--rotateY', '0deg');
         });
     });
+
+    // --- 8. BOTÓ "TORNAR A DALT" ---
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // --- 9. VALIDACIÓ I GESTIÓ DEL FORMULARI DE CONTACTE ---
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.querySelector('span').textContent;
+            
+            // Desactivar botó i mostrar estat de càrrega
+            submitBtn.disabled = true;
+            submitBtn.querySelector('span').textContent = 'Enviant...';
+            
+            // Amagar missatges anteriors
+            formMessage.style.display = 'none';
+            formMessage.className = 'form-message';
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    // Èxit
+                    formMessage.textContent = '✓ Missatge enviat correctament! Gràcies per contactar-me.';
+                    formMessage.classList.add('success');
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    // Error del servidor
+                    formMessage.textContent = '✗ Error en enviar el missatge. Si us plau, prova-ho més tard o contacta directament per correu.';
+                    formMessage.classList.add('error');
+                    formMessage.style.display = 'block';
+                }
+            } catch (error) {
+                // Error de connexió
+                console.error('Error:', error);
+                formMessage.textContent = '✗ Error de connexió. Comprova la teva connexió a internet i torna-ho a intentar.';
+                formMessage.classList.add('error');
+                formMessage.style.display = 'block';
+            } finally {
+                // Restaurar botó
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').textContent = originalText;
+            }
+        });
+    }
 
 });
