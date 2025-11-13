@@ -165,6 +165,8 @@ body {
 }
 
 .header .nav-menu {
+    /* Estils per a escriptori */
+    display: flex;
     display: flex;
     list-style: none;
     gap: 2.5rem;
@@ -266,7 +268,7 @@ body {
 
 /* Menú mòbil - Botó hamburguesa */
 .nav-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -939,6 +941,73 @@ section h2 {
 }
 
 .habilitat {
+    background: var(--color-fons-tercer);
+    color: var(--color-text);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    border: 1px solid var(--color-border);
+}
+
+.habilitat:hover {
+    background: var(--color-primari);
+    color: white;
+    border-color: var(--color-primari);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+/* Nou estil per a la secció d'habilitats */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.skills-category {
+    background: var(--color-fons-secundari);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s;
+}
+
+.skills-category:hover {
+    border-color: var(--color-primari);
+    transform: translateY(-5px);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.category-header i {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+}
+
+.category-header h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-titol);
+}
+
+.graella-habilitats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.habilitat {
     display: inline-flex;
     align-items: center;
     padding: 0.75rem 1.5rem;
@@ -1400,6 +1469,8 @@ footer#contacte p {
  * ========================================= */
 @media (max-width: 968px) {
     .header .nav-menu {
+    /* Estils per a escriptori */
+    display: flex;
         position: fixed;
         top: 0;
         right: -100%;
@@ -1454,8 +1525,47 @@ footer#contacte p {
     }
 }
 
-@media (max-width: 640px) {
-    .container {
+@media (max-width: 1024px) {
+    
+    .header .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Amagat per defecte */
+        width: 300px;
+        height: 100vh;
+        background-color: var(--color-fons-secundari);
+        flex-direction: column;
+        padding: 8rem 2rem 2rem;
+        box-shadow: var(--shadow-xl);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        display: none; /* Amagat per defecte, es mostra amb JS */
+    }
+
+    .header .nav-menu.is-active {
+        right: 0;
+        display: flex; /* Mostrar quan està actiu */
+    }
+
+    .header .nav-menu li {
+        margin-bottom: 1.5rem;
+    }
+
+    .header .nav-menu li a {
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .header .nav-menu li a::after {
+        height: 3px;
+    }
+    
+    .nav-toggle {
+        display: flex;
+        z-index: 1001; /* Assegurar que estigui per sobre del menú */
+    }    .container {
         padding: 0 1.5rem;
     }
 
