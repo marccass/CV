@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ca" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="pageTitle">Portfoli | Marc Cassanmagnago Somoza</title>
+    
+    <!-- Metadades SEO -->
+    <meta name="description" content="Marc Cassanmagnago Somoza - Estudiant d'Enginyeria Informàtica a la UdG. Portfoli de projectes de desenvolupament de programari, visió per computador i aplicacions mòbils.">
+    <meta name="keywords" content="Marc Cassanmagnago, Enginyeria Informàtica, Desenvolupador, Portfoli, UdG, Programació, C++, Python, Java">
+    <meta name="author" content="Marc Cassanmagnago Somoza">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cassanmagnago.com/">
+    <meta property="og:title" content="Marc Cassanmagnago Somoza | Portfoli Professional">
+    <meta property="og:description" content="Estudiant d'Enginyeria Informàtica apassionat pel desenvolupament de programari i la tecnologia">
+    <meta property="og:image" content="https://cassanmagnago.com/preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cassanmagnago.com/">
+    <meta property="twitter:title" content="Marc Cassanmagnago Somoza | Portfoli Professional">
+    <meta property="twitter:description" content="Estudiant d'Enginyeria Informàtica apassionat pel desenvolupament de programari">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png">
+    
+    <!-- Fonts optimitzades -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Partícules de fons animades -->
+    <div class="particles-background" id="particles"></div>
+    
+    <!-- Overlay per al menú mòbil -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- Barra de progrés de scroll -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="header" role="navigation" aria-label="Navegació principal">
+        <div class="container">
+            <a href="#inici" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                Marc C. Somoza
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#sobre-mi" class="nav-link" data-key="navAbout">Sobre Mi</a></li>
+                <li><a href="#educacio" class="nav-link" data-key="navEducation">Educació</a></li>
+                <li><a href="#habilitats" class="nav-link" data-key="navSkills">Habilitats</a></li>
+                <li><a href="#projectes" class="nav-link" data-key="navProjects">Projectes</a></li>
+                <li><a href="#experiencia" class="nav-link" data-key="navExperience">Experiència</a></li>
+                <li><a href="#contacte" class="nav-link" data-key="navContact">Contacte</a></li>
+            </ul>
+            
+            <div class="controls-container">
+                <button id="theme-toggle" aria-label="Canviar tema">
+                    <i class="fas fa-sun"></i>
+                </button>
+                
+                <div class="lang-switcher">
+                    <button id="lang-ca" class="lang-button active" aria-label="Canviar a català">CA</button>
+                    <button id="lang-es" class="lang-button" aria-label="Canviar a espanyol">ES</button>
+                    <button id="lang-en" class="lang-button" aria-label="Canviar a anglès">EN</button>
+                </div>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inici">
+        <div class="contingut-hero">
+            <div class="hero-badge fade-in-up">
+                <i class="fas fa-code"></i>
+                <span data-key="heroBadge">Disponible per a noves oportunitats</span>
+            </div>
+            <h1 class="fade-in-up delay-1" data-key="heroTitle">Marc Cassanmagnago Somoza</h1>
+            <h2 class="fade-in-up delay-2" data-key="heroSubtitle">Estudiant d'Enginyeria Informàtica | Desenvolupador de Programari en formació</h2>
+            <p class="fade-in-up delay-3" data-key="heroDesc">
+                Hola, sóc en Marc. Un estudiant d'Enginyeria Informàtica a la Universitat de Girona apassionat pel desenvolupament de programari, la programació i els sistemes. Busco activament noves experiències per guanyar experiència pràctica i seguir creixent dins del sector tecnològic.
+            </p>
+            <div class="botons-hero fade-in-up delay-4">
+                <a href="#projectes" class="boto boto-primari">
+                    <i class="fas fa-code"></i> 
+                    <span data-key="heroBtnProjects">Veure Projectes</span>
+                </a>
+                
+                <a href="#" id="download-cv-btn" class="boto boto-secundari" download rel="noopener noreferrer">
+                    <i class="fas fa-download"></i> 
+                    <span data-key="heroBtnCV">Descarregar CV</span>
+                </a>
+                
+                <a href="#contacte" class="boto boto-outline">
+                    <i class="fas fa-envelope"></i> 
+                    <span data-key="heroBtnContact">Contacta'm</span>
+                </a>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator fade-in-up delay-5">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Secció Sobre Mi amb foto de perfil -->
+        <section id="sobre-mi" class="section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 data-key="aboutTitle">Sobre Mi</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <img src="/img/profile-photo.jpg" alt="Marc Cassanmagnago Somoza" class="profile-photo" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <p class="about-intro" data-key="aboutDesc">El meu objectiu principal és submergir-me en un entorn professional real que em permeti aplicar els coneixements del meu Grau en Enginyeria Informàtica i descobrir quines àrees del món *tech* m'agraden més.</p>
+                        
+                        <ul class="about-list">
+                            <li data-key="aboutLang">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <strong>Idiomes:</strong> Sóc parlant natiu de català i espanyol. A més, tinc un nivell d'anglès molt alt i fluid (parlat i escrit), adquirit en part gràcies a una estada de dos anys als Estats Units. També tinc un nivell bàsic d'italià.
+                                </div>
+                            </li>
+                            <li data-key="aboutMobility">
+                                <i class="fas fa-car"></i>
+                                <div>
+                                    <strong>Mobilitat:</strong> Disposo de carnet de conduir tipus B i A2, i vehicle particular, la qual cosa em dóna total autonomia per desplaçar-me.
+                                </div>
+                            </li>
+                            <li data-key="aboutInterests">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <strong>Interessos:</strong> Fora de la tecnologia, m'interessa el gimnàs i viatjar a l'estranger.
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <!-- Enllaços socials destacats -->
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Marc Cassanmagnago" class="social-link">
+                                <i class="fab fa-linkedin"></i> 
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/marccass" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Marc Cassanmagnago" class="social-link">
+                                <i class="fab fa-github"></i> 
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SECCIÓ: Educació -->
+        <section id="educacio" class="section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 data-key="educationTitle">Educació</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-key="edu1Period">2021 - Actualitat</div>
+                            <h3 data-key="edu1Title">Grau en Enginyeria Informàtica</h3>
+                            <span class="timeline-institution" data-key="edu1Institution">Universitat de Girona (UdG)</span>
+                            <p data-key="edu1Desc">Formació integral en desenvolupament de programari, sistemes informàtics i tecnologies emergents. Especialització en visió per computador, bases de dades i desenvolupament d'aplicacions.</p>
+                            
+                            <div class="subjects-highlight">
+                                <h4 data-key="edu1SubjectsTitle">Assignatures destacades:</h4>
+                                <div class="subjects-grid">
+                                    <span class="subject-tag" data-key="edu1Subject1"><i class="fas fa-eye"></i> Visió per Computador</span>
+                                    <span class="subject-tag" data-key="edu1Subject2"><i class="fas fa-database"></i> Bases de Dades</span>
+                                    <span class="subject-tag" data-key="edu1Subject3"><i class="fas fa-mobile-alt"></i> Desenvolupament d'Aplicacions Mòbils</span>
+                                    <span class="subject-tag" data-key="edu1Subject4"><i class="fas fa-code"></i> Programació Avançada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilitats" class="section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 data-key="skillsTitle">Habilitats Tècniques</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-subtitle" data-key="skillsDesc">Aquestes són algunes de les tecnologies amb les quals he treballat durant la meva formació i projectes:</p>
+                
+                <!-- Habilitats agrupades per categories -->
+                <div class="skills-wrapper">
+                    <div class="skills-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3 data-key="skillsCatLang">Llenguatges de Programació</h3>
+                        </div>
+                        <div class="graella-habilitats">
+                            <div class="habilitat">
+                                <div class="skill-icon">C++</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">Python</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">Java</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">SQL</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3 data-key="skillsCatTools">Eines i Tecnologies</h3>
+                        </div>
+                        <div class="graella-habilitats">
+                            <div class="habilitat">
+                                <div class="skill-icon">Git</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">Android Studio</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">OpenCV</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">MySQL</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">Linux</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <div class="category-header">
+                            <i class="fas fa-globe"></i>
+                            <h3 data-key="skillsCatWeb">Desenvolupament Web</h3>
+                        </div>
+                        <div class="graella-habilitats">
+                            <div class="habilitat">
+                                <div class="skill-icon">HTML5</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">CSS3</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="habilitat">
+                                <div class="skill-icon">JavaScript</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projectes" class="section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 data-key="projectsTitle">Projectes Destacats</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="graella-projectes">
+                    <!-- Projecte 1 -->
+                    <div class="targeta-projecte">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop" alt="Projecte de Visió per Computador" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/marccass" target="_blank" rel="noopener noreferrer" class="project-link" data-key="projectBtnCode">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contingut-targeta">
+                            <h3 data-key="project1Title">Projecte de Visió per Computador</h3>
+                            <p data-key="project1Desc">Projecte acadèmic desenvolupat amb C++ i la llibreria OpenCV per a la detecció d'objectes en temps real.</p>
+                            
+                            <div class="tecnologies-projecte">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projecte 2 -->
+                    <div class="targeta-projecte">
+                        <div class="project-image-wrapper">
+                            <img src="/img/combined_analysis.png" alt="Visualitzador del Conjunt de Mandelbrot" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/marccass" target="_blank" rel="noopener noreferrer" class="project-link" data-key="projectBtnCode">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contingut-targeta">
+                            <h3 data-key="project2Title">Visualitzador del Conjunt de Mandelbrot Paral·lel (HPC)</h3>
+                            <p data-key="project2Desc">El nucli del projecte és un visualitzador del Conjunt de Mandelbrot implementat en C++ i optimitzat amb OpenMP. Aquest problema, conegut per ser "embarrassingly parallel", serveix com a banc de proves ideal per demostrar la meva capacitat per dissenyar i implementar solucions que aprofiten al màxim els sistemes multi-nucli.</p>
+                            
+                            <div class="tecnologies-projecte">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">OpenMP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projecte 3 -->
+                    <div class="targeta-projecte">
+                        <div class="project-image-wrapper">
+                            <img src="/img/WEBSITE.png" alt="Lloc Web Personal" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/marccass" target="_blank" rel="noopener noreferrer" class="project-link" data-key="projectBtnCode">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contingut-targeta">
+                            <h3 data-key="project3Title">El Meu Lloc Web Personal</h3>
+                            <p data-key="project3Desc">La meva pàgina web personal és un aparador de les meves habilitats de desenvolupament web, construïda amb HTML5, CSS i JavaScript. Aquest projecte se centra en el disseny web i una experiència d'usuari amigable, destacant la meva experiència i habilitats mitjançant una interfície web interactiva.</p>
+                            
+                            <div class="tecnologies-projecte">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 data-key="expTitle">Experiència Professional</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <div class="experience-content">
+                            <div class="experience-period">2021-2025</div>
+                            <h3 data-key="exp1Title">Àrbitre</h3>
+                            <span class="experience-company">Federació Catalana de Futbol</span>
+                            <p data-key="exp1Desc">Gestió de partits i resolució de conflictes en temps real. M'ha permès desenvolupar responsabilitat, la capacitat de prendre decisions ràpides i l'habilitat de treballar sota pressió.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="experience-content">
+                            <div class="experience-period">2021-2022</div>
+                            <h3 data-key="exp2Title">Community Manager</h3>
+                            <span class="experience-company">CE Vilassar de Dalt</span>
+                            <p data-key="exp2Desc">Gestió de xarxes socials i creació de contingut digital. Tasques de disseny de publicacions, seguiment d'estadístiques i contacte directe amb els seguidors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacte">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2 data-key="contactTitle">Parlem!</h2>
+                    <p data-key="contactDesc">Estic obert a noves oportunitats laborals i col·laboracions.<br>Si el meu perfil t'interessa, no dubtis a contactar-me.</p>
+                    
+                    <div class="enllacos-contacte">
+                        <a href="mailto:marccaso04@gmail.com" aria-label="Enviar correu electrònic a Marc" class="contact-link">
+                            <i class="fas fa-envelope"></i> 
+                            <span>marccaso04@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/marc-cassanmagnago-5b7773294/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Marc Cassanmagnago" class="contact-link">
+                            <i class="fab fa-linkedin"></i> 
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/marccass" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Marc Cassanmagnago" class="contact-link">
+                            <i class="fab fa-github"></i> 
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form-footer" id="contact-form">
+                        <input type="hidden" name="access_key" value="d1f663b9-848a-41d8-b7ce-0824635067d9">
+                        <input type="hidden" name="subject" value="Nou missatge del teu Portfoli">
+                        <input type="hidden" name="from_name" value="Portfoli Marc C.">
+                        
+                        <!-- Honeypot per prevenir spam -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <div class="form-group-footer">
+                            <input type="email" name="email" data-key="formPlaceholder" placeholder="El teu correu electrònic" required>
+                            <button type="submit" class="animated-button">
+                                <span data-key="formButton">Enviar</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" data-key="footerCopyright">© 2025 Marc Cassanmagnago Somoza.</p>
+                <div class="footer-links">
+                    <a href="#inici">Inici</a>
+                    <a href="#sobre-mi">Sobre Mi</a>
+                    <a href="#projectes">Projectes</a>
+                    <a href="#contacte">Contacte</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botó per tornar a dalt -->
+    <button id="scroll-to-top" aria-label="Tornar a dalt">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
