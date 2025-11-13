@@ -25,7 +25,7 @@ const translations = {
     educationTitle: "Educació",
     edu1Title: "Grau en Enginyeria Informàtica",
     edu1Institution: "Universitat de Girona (UdG)",
-    edu1Period: "2021 - Actualitat",
+    edu1Period: "2022 - Actualitat",
     edu1Desc: "Formació integral en desenvolupament de programari, sistemes informàtics i tecnologies emergents. Especialització en visió per computador, bases de dades i desenvolupament d'aplicacions.",
     edu1SubjectsTitle: "Assignatures destacades:",
     edu1Subject1: "Base de Dades",
@@ -97,7 +97,7 @@ const translations = {
     educationTitle: "Educación",
     edu1Title: "Grado en Ingeniería Informática",
     edu1Institution: "Universitat de Girona (UdG)",
-    edu1Period: "2021 - Actualidad",
+    edu1Period: "2022 - Actualidad",
     edu1Desc: "Formación integral en desarrollo de software, sistemas informáticos y tecnologías emergentes. Especialización en visión por computador, bases de datos y desarrollo de aplicaciones.",
     edu1SubjectsTitle: "Asignaturas destacadas:",
     edu1Subject1: "Base de Datos",
@@ -169,7 +169,7 @@ const translations = {
     educationTitle: "Education",
     edu1Title: "Bachelor's Degree in Computer Science",
     edu1Institution: "University of Girona (UdG)",
-    edu1Period: "2021 - Present",
+    edu1Period: "2022 - Present",
     edu1Desc: "Comprehensive training in software development, computer systems, and emerging technologies. Specialization in computer vision, databases, and application development.",
     edu1SubjectsTitle: "Featured subjects:",
     edu1Subject1: "Databases",
@@ -215,3 +215,4 @@ const translations = {
     footerCopyright: "© 2025 Marc Cassanmagnago Somoza."
   }
 };
+
