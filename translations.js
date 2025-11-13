@@ -34,6 +34,12 @@ const translations = {
     edu1Subject4: "Intel·ligència Artificial",
     edu1Subject5: "Enginyeria del Software",
     
+    // --- NOVES TRADUCCIONS AFEGIDES ---
+    edu2Title: "Batxillerat Científic-Tecnològic",
+    edu2Institution: "IES Baix Montseny",
+    edu2Period: "Set 2019 - Jun 2022",
+    // ------------------------------------
+
     skillsTitle: "Habilitats Tècniques",
     skillsDesc: "Aquestes són algunes de les tecnologies amb les quals he treballat durant la meva formació i projectes:",
     skillsCatLang: "Llenguatges de Programació",
@@ -100,6 +106,12 @@ const translations = {
     edu1Subject4: "Inteligencia Artificial",
     edu1Subject5: "Ingeniería del Software",
     
+    // --- NOVES TRADUCCIONS AFEGIDES ---
+    edu2Title: "Bachillerato Científico-Tecnológico",
+    edu2Institution: "IES Baix Montseny",
+    edu2Period: "Sep 2019 - Jun 2022",
+    // ------------------------------------
+    
     skillsTitle: "Habilidades Técnicas",
     skillsDesc: "Estas son algunas de las tecnologías con las que he trabajado durante mi formación y proyectos:",
     skillsCatLang: "Lenguajes de Programación",
@@ -165,6 +177,12 @@ const translations = {
     edu1Subject3: "Computer Fundamentals",
     edu1Subject4: "Artificial Intelligence",
     edu1Subject5: "Software Engineering",
+
+    // --- NOVES TRADUCCIONS AFEGIDES ---
+    edu2Title: "Scientific-Technological Baccalaureate",
+    edu2Institution: "IES Baix Montseny",
+    edu2Period: "Sep 2019 - Jun 2022",
+    // ------------------------------------
     
     skillsTitle: "Technical Skills",
     skillsDesc: "These are some of the technologies I have worked with during my training and projects:",
