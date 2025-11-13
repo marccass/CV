@@ -98,9 +98,10 @@ body {
     left: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--color-primari), var(--color-accent));
-    z-index: 1000;
+    z-index: 1003;
     transition: width 0.1s ease-out;
     box-shadow: 0 0 10px var(--color-primari);
+    pointer-events: none;
 }
 
 /* =========================================
@@ -113,7 +114,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1002;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -275,6 +276,7 @@ body {
     cursor: pointer;
     padding: 0;
     z-index: 1001;
+    position: relative;
 }
 
 .nav-toggle span {
@@ -309,7 +311,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 99;
+    z-index: 999;
     backdrop-filter: blur(5px);
 }
 
@@ -930,57 +932,32 @@ section h2 {
 }
 
 .graella-habilitats {
-    display: grid;
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .habilitat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.skill-icon {
-    font-weight: 700;
-    color: var(--color-titol);
-    font-size: 1.1rem;
-}
-
-.skill-bar {
-    height: 8px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
     background: var(--color-fons);
+    color: var(--color-text);
     border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--color-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
 }
 
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--color-primari), var(--color-accent));
-    border-radius: 10px;
-    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-progress::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+.habilitat:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, var(--color-primari), var(--color-accent));
+    color: white;
+    border-color: var(--color-primari);
+    box-shadow: var(--shadow-lg);
 }
 
 /* =========================================
@@ -1434,7 +1411,8 @@ footer#contacte p {
         gap: 2rem;
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: var(--shadow-xl);
-        z-index: 100;
+        z-index: 1000;
+        overflow-y: auto;
     }
 
     .header .nav-menu.is-active {

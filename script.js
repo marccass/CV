@@ -242,10 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Animar barres de progrés d'habilitats
-                if (entry.target.id === 'habilitats') {
-                    animateSkillBars();
-                }
+                // Les habilitats ja no tenen barres de progrés
             }
         });
     }, observerOptions);
@@ -256,26 +253,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // =========================================
-    // 8. ANIMACIÓ DE BARRES D'HABILITATS
+    // 8. ANIMACIONS D'HABILITATS (sense barres)
     // =========================================
-    let skillsAnimated = false;
-    
-    function animateSkillBars() {
-        if (skillsAnimated) return;
-        
-        const skillBars = document.querySelectorAll('.skill-progress');
-        skillBars.forEach((bar, index) => {
-            setTimeout(() => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 50);
-            }, index * 100);
-        });
-        
-        skillsAnimated = true;
-    }
+    // Les habilitats ara es mostren com a tags sense barres de progrés
 
     // =========================================
     // 9. EFECTE PARALLAX SUAU PER PROJECTES
