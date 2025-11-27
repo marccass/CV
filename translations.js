@@ -48,7 +48,7 @@ const translations = {
     
     projectsTitle: "Projectes Destacats",
     project1Title: "Desenvolupament de consultes SQL per a l’anàlisi del marge de benefici i la generació d’informes de KPI.",
-    project1Desc: "Disseny i implementació d’un pipeline ETL processant més de 10.000 registres de vendes amb Pandas. Modelatge d’una arquitectura de base de dades en esquema estrella per optimitzar consultes analítiquesDesenvolupament de consultes SQL per a l’anàlisi del marge de benefici i la generació d’informes de KPI.Tecnologies: Python, SQL (SQLite), Pandas, SQLAlchemy, Matplotlib.",
+    project1Desc: "Disseny i implementació d’un pipeline ETL processant més de 10.000 registres de vendes amb Pandas. Modelatge d’una arquitectura de base de dades en esquema estrella per optimitzar consultes analítiquesDesenvolupament de consultes SQL per a l’anàlisi del marge de benefici i la generació d’informes de KPI.",
     project2Title: "Visualitzador del Conjunt de Mandelbrot Paral·lel (HPC)",
     project2Desc: "El nucli del projecte és un visualitzador del Conjunt de Mandelbrot implementat en C++ i optimitzat amb OpenMP. Aquest problema, conegut per ser \"embarrassingly parallel\", serveix com a banc de proves ideal per demostrar la meva capacitat per dissenyar i implementar solucions que aprofiten al màxim els sistemes multi-nucli.",
     project3Title: "El Meu Lloc Web Personal",
@@ -120,7 +120,7 @@ const translations = {
     
     projectsTitle: "Proyectos Destacados",
     project1Title: "Proyecto de Data Warehouse Retail",
-    project1Desc: "Diseño e implementación de una tubería ETL procesando más de 10.000 registros de ventas con Pandas. Modelado de una arquitectura de base de datos con esquema estrella para optimizar consultas analíticas. Desarrollo de consultas SQL para el análisis de márgenes de beneficio y la elaboración de informes de KPIs. Tecnologías: Python, SQL (SQLite), Pandas, SQLAlchemy, Matplotlib.",
+    project1Desc: "Diseño e implementación de una tubería ETL procesando más de 10.000 registros de ventas con Pandas. Modelado de una arquitectura de base de datos con esquema estrella para optimizar consultas analíticas. Desarrollo de consultas SQL para el análisis de márgenes de beneficio y la elaboración de informes de KPIs.",
     project2Title: "Visualizador del Conjunto de Mandelbrot Paralelo (HPC)",
     project2Desc: "El núcleo del proyecto es un visualizador del Conjunto de Mandelbrot implementado en C++ y optimizado con OpenMP. Este problema, conocido por ser 'embarrassingly parallel', sirve como un banco de pruebas ideal para demostrar mi capacidad para diseñar e implementar soluciones que aprovechan al máximo los sistemas multinúcleo.",
     project3Title: "Mi sitio Web Personal",
@@ -192,7 +192,7 @@ const translations = {
     
     projectsTitle: "Featured Projects",
     project1Title: "Retail Data Warehousing Project",
-    project1Desc: "Designed and implemented an ETL pipeline processing 10k+ sales records using Pandas. Modeled a Star Schema database architecture to optimize analytical queries. Developed SQL queries for profit margin analysis and KPI reporting. Tech Stack: Python, SQL (SQLite), Pandas, SQLAlchemy, Matplotlib.",
+    project1Desc: "Designed and implemented an ETL pipeline processing 10k+ sales records using Pandas. Modeled a Star Schema database architecture to optimize analytical queries. Developed SQL queries for profit margin analysis and KPI reporting.",
     project2Title: "Parallel Mandelbrot Set Viewer (HPC)",
     project2Desc: "The core of the project is a Mandelbrot Set viewer implemented in C++ and optimized with OpenMP. This problem, known for being 'embarrassingly parallel', serves as an ideal testbed to demonstrate my ability to design and implement solutions that fully leverage multi-core systems.",
     project3Title: "My Personal Website",
@@ -215,5 +215,6 @@ const translations = {
     footerCopyright: "© 2025 Marc Cassanmagnago Somoza."
   }
 };
+
 
 
