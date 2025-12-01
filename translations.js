@@ -69,6 +69,8 @@ const translations = {
     exp1Desc: "Gestió de partits i resolució de conflictes en temps real. M'ha permès desenvolupar responsabilitat, la capacitat de prendre decisions ràpides i l'habilitat de treballar sota pressió.",
     exp2Title: "Community Manager",
     exp2Desc: "Gestió de xarxes socials i creació de contingut digital. Tasques de disseny de publicacions, seguiment d'estadístiques i contacte directe amb els seguidors.",
+    exp3Title: "Professor Particular de Matemàtiques",
+    exp3Desc: "Classes particulars per a estudiants de secundària. Reforç en matemàtiques, orientació personalitzada i suport acadèmic.",
     
     contactTitle: "Parlem!",
     contactDesc: "Estic obert a noves oportunitats laborals en Data Science o Engineering.<br>Si el meu perfil t'interessa, no dubtis a contactar-me.",
@@ -147,6 +149,8 @@ const translations = {
     exp1Desc: "Gestión de partidos y resolución de conflictos en tiempo real. Me ha permitido desarrollar responsabilidad, la capacidad de tomar decisiones rápidas y la habilidad de trabajar bajo presión.",
     exp2Title: "Community Manager",
     exp2Desc: "Gestión de redes sociales y creación de contenido digital. Tareas de diseño de publicaciones, seguimiento de estadísticas y contacto directo con los seguidores.",
+    exp3Title: "Profesor Particular de Matemáticas",
+    exp3Desc: "Clases particulares para estudiantes de secundaria. Refuerzo en matemáticas, orientación personalizada y apoyo académico.",
     
     contactTitle: "¡Hablemos!",
     contactDesc: "Busco oportunidades en Data Science o Engineering.<br>Si mi perfil te interesa, no dudes en contactarme.",
@@ -225,6 +229,8 @@ const translations = {
     exp1Desc: "Match management and real-time conflict resolution. It has allowed me to develop responsibility, the ability to make quick decisions, and the skill to work under pressure.",
     exp2Title: "Community Manager",
     exp2Desc: "Social media management and digital content creation. Tasks included designing publications, tracking statistics, and direct contact with followers.",
+    exp3Title: "Mathematics Tutor",
+    exp3Desc: "Private tutoring for secondary school students. Reinforcement in mathematics, personalized guidance, and academic support.",
     
     contactTitle: "Let's Talk!",
     contactDesc: "I am looking for opportunities in Data Science or Engineering.<br>If my profile interests you, don't hesitate to contact me.",
@@ -232,4 +238,5 @@ const translations = {
     formButton: "Send",
     footerCopyright: "© 2025 Marc Cassanmagnago Somoza."
   }
+
 };
