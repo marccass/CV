@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // =========================================
     function init() {
         // Carregar preferències guardades
-        const savedLang = localStorage.getItem('lang') || 'ca';
+        const savedLang = localStorage.getItem('lang') || 'en';
         const savedTheme = localStorage.getItem('theme') || 'dark';
         
         setLanguage(savedLang);
