@@ -49,6 +49,11 @@ const translations = {
     skillsCatDB: "Bases de Dades",
     
     projectsTitle: "Projectes Destacats",
+    
+   
+    projectRetailTitle: "Retail Data Warehousing (ETL)",
+    projectRetailDesc: "Disseny d'un pipeline ETL processant més de 10k registres, modelatge d'esquema en estrella (Star Schema) i consultes SQL per a l'anàlisi de KPIs i marges de benefici.",
+    
     project1Title: "Visió per Computador",
     project1Desc: "Detecció d'objectes en temps real utilitzant C++ i la llibreria OpenCV.",
     project2Title: "Mandelbrot Paral·lel (HPC)",
@@ -56,6 +61,7 @@ const translations = {
     project3Title: "Portfolio Personal",
     project3Desc: "Web personal desenvolupada per mostrar projectes i habilitats. Construïda amb HTML5, CSS i JavaScript.",
     projectBtnCode: "Veure Codi",
+    projectBtnDownload: "Descargar Memoria",
     projectBtnDemo: "Demo en Viu",
     
     expTitle: "Experiència Professional",
@@ -121,6 +127,11 @@ const translations = {
     skillsCatDB: "Bases de Datos",
     
     projectsTitle: "Proyectos Destacados",
+
+   
+    projectRetailTitle: "Retail Data Warehousing (ETL)",
+    projectRetailDesc: "Diseño de pipeline ETL procesando +10k registros, modelado de esquema en estrella (Star Schema) y consultas SQL para análisis de KPIs y márgenes.",
+
     project1Title: "Visión por Computador",
     project1Desc: "Detección de objetos en tiempo real utilizando C++ y la librería OpenCV.",
     project2Title: "Mandelbrot Paralelo (HPC)",
@@ -128,6 +139,7 @@ const translations = {
     project3Title: "Portfolio Personal",
     project3Desc: "Web personal desarrollada para mostrar proyectos y habilidades. Construida con HTML5, CSS y JavaScript.",
     projectBtnCode: "Ver Código",
+    projectBtnDownload: "Descargar Memoria",
     projectBtnDemo: "Demo en Vivo",
     
     expTitle: "Experiencia Profesional",
@@ -193,6 +205,11 @@ const translations = {
     skillsCatDB: "Databases",
     
     projectsTitle: "Featured Projects",
+
+  
+    projectRetailTitle: "Retail Data Warehousing (ETL)",
+    projectRetailDesc: "Designed an ETL pipeline processing 10k+ sales records, modeled a Star Schema, and developed SQL queries for KPI reporting.",
+
     project1Title: "Computer Vision Project",
     project1Desc: "Real-time object detection using C++ and the OpenCV library.",
     project2Title: "Parallel Mandelbrot Set Viewer (HPC)",
@@ -200,6 +217,7 @@ const translations = {
     project3Title: "Personal Portfolio",
     project3Desc: "Personal website developed to showcase projects and skills. Built with HTML5, CSS, and JavaScript.",
     projectBtnCode: "View Code",
+    projectBtnDownload: "Download Report",
     projectBtnDemo: "Live Demo",
     
     expTitle: "Professional Experience",

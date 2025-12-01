@@ -1099,23 +1099,40 @@ section h2 {
     gap: 1rem;
 }
 
+/* =========================================
+ * Estil SÒLID per als botons (Màxima Visibilitat)
+ * ========================================= */
+
 .project-link {
-    width: 50px;
-    height: 50px;
-    background: white;
-    color: var(--color-primari);
+    width: 55px; /* Una mica més gran per destacar */
+    height: 55px;
+    
+    /* Fons blanc pur per màxim contrast */
+    background: var(--color-primari);
+    
+    /* Icona del color blau/primari de la web perquè destaqui sobre el blanc */
+     color: #ffffff; 
+    
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.4rem;
     text-decoration: none;
+    
+    /* Ombra forta per separar-lo del fons */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:hover {
-    transform: scale(1.2) rotate(360deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* En passar el ratolí, s'inverteixen els colors */
+    background: var(--color-primari); /* Es torna blau */
+    color: #ffffff;                   /* La icona es torna blanca */
+    
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .contingut-targeta {
