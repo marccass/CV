@@ -6,7 +6,7 @@
 
 Welcome to the source code of my personal portfolio website. This project serves as a showcase of my academic background, technical skills, and projects in **Data Science**, **Software Engineering**, and **Computer Vision**.
 
-🔗 **Live Demo:** [Insert your website link here]
+🔗 **Live Demo:** [https://cassanmagnago.com/]
 
 ---
 
@@ -58,4 +58,5 @@ The content reflects my journey as a **Computer Science student at the Universit
 ├── script.js           # Logic for UI, theme, translations, and animations
 ├── translations.js     # Dictionary object containing all text content (EN/ES/CA)
 ├── img/                # Profile photos and project assets
+
 └── favicon_io/         # Favicons
